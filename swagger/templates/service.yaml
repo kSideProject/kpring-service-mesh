@@ -1,15 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "swagger.fullname" . }}
-  labels:
-    {{- include "swagger.labels" . | nindent 4 }}
+  name: {{ .Values.name }}
+  namespace: {{ .Release.namespace | default }}
 spec:
-  type: {{ .Values.service.type }}
+  type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 80
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
-      name: http
   selector:
-    {{- include "swagger.selectorLabels" . | nindent 4 }}
+    app: {{ .Values.name }}
