@@ -2,6 +2,7 @@ namespace: argocd
 
 resources:
   - ../base
+  - application/swagger.yaml
 
 patches:
   - path: config.yaml
