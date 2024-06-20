@@ -3,6 +3,7 @@ namespace: argocd
 resources:
   - ../base
   - application/swagger.yaml
+  - application/kpring.yaml
 
 patches:
   - path: config.yaml
