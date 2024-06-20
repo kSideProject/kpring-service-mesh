@@ -13,14 +13,14 @@ spec:
     - host: kpring.duckdns.org
       http:
         paths:
-          - path: /
+          - path: /argocd
             pathType: Prefix
             backend:
               service:
                 name: argocd-server
                 port:
                   name: https
-  tls:
-    - hosts:
-      - argocd.example.com
-      secretName: argocd-server-tls # as expected by argocd-server
+#  tls:
+#    - hosts:
+#      - kpring.duckdns.org
+#      secretName: argocd-server-tls # as expected by argocd-server
