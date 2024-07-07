@@ -13,7 +13,7 @@ env:
   - name: BASE_URL
     value: "/swagger"
   - name: URLS
-    value: "[{name: 'auth', url: 'http://kpring.duckdns.org/auth/static/openapi3.yaml'},{name: 'user', url: 'http://kpring.duckdns.org/user/static/openapi3.yaml'}, {name: 'server', url: 'http://kpring.duckdns.org/server/static/openapi3.yaml'}]"
+    value: "[{name: 'auth', url: 'https://kpring.duckdns.org/auth/static/openapi3.yaml'},{name: 'user', url: 'https://kpring.duckdns.org/user/static/openapi3.yaml'}, {name: 'server', url: 'https://kpring.duckdns.org/server/static/openapi3.yaml'}]"
 
 ingress:
   enabled: true
