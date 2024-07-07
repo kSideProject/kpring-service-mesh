@@ -10,7 +10,7 @@ spec:
             url: https://kubernetes.default.svc
   template:
     metadata:
-      name: '{{cluster}}-kpring-msa'
+      name: '{{cluster}}-application-msa'
     spec:
       project: default
       source:
