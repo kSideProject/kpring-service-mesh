@@ -20,9 +20,14 @@ ingress:
   className: "nginx"
   annotations:
     kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: kpring.duckdns.org
       paths:
         - path: /swagger
           pathType: Prefix
           name: swagger
+  tls:
+    - hosts:
+        - kpring.duckdns.org
+      secretName: letsencrypt-prod-tls
