@@ -12,6 +12,8 @@ spec:
     metadata:
       name: '{{cluster}}-application-msa'
     spec:
+      syncPolicy:
+        automated: { }
       project: default
       source:
         repoURL: https://github.com/kSideProject/kpring-infra.git
